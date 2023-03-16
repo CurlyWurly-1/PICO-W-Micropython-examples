@@ -1,7 +1,7 @@
 # PICO-W--Micropython-examples-
 For the RP2040 W - A collection of Micropython programs.
 
-N.B. There are 3 pairs of connections to the 3.3V/Gnd power. You will have to make up some sort of wire connection as there are not enough power point pairs of 3.3V and GND on the PICO. An easy way to connect everything together, is to use a breadboard.   
+N.B. Three decices need to be connected to the PICO W, that means 3 pairs of connections to the 3.3V/Gnd power but there is only one 3.3V pin on the PICO. An easy way to connect everything together is to use a breadboard.   
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
