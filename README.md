@@ -8,7 +8,8 @@ N.B. Be aware that as there are three devices that need to be connected to the P
 However, there is only one 3.3V pin on the PICO so rather than using a breadboard, consider creating a split power harness (i.e. 1 pair in, 3 pairs out).
 
 If you don't want to do this, consider using a breadboard to connect everything together, but you might need to add 1K pullup resistors to the SDA and SCL lines.
-N.B. Using a split power harness and separate wires, I found dn that I did not need to add pull up resistors, but consider that your luck may vary
+
+In may case,  I found that I did not need to add pull up resistors using a split power harness and separate wires, but consider that YMMV here.
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
