@@ -9,7 +9,7 @@ However, there is only one 3.3V pin on the PICO so rather than using a breadboar
 
 If you don't want to do this, consider using a breadboard to connect everything together, but you might need to add 1K pullup resistors to the SDA and SCL lines.
 
-In may case,  I found that I did not need to add pull up resistors using a split power harness and separate wires, but consider that YMMV here.
+In may case, using a split 3.3V power harness and separate wires for the TX/RX/SDA/SCL pins meant that I didn't have to add pull up resistors, but consider that YMMV here.
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
