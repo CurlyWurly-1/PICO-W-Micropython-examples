@@ -4,7 +4,7 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs you can
  - BNO0055 module
  - GPS Module
 
-N.B. Three decices need to be connected to the PICO W, that means 3 pairs of connections to the 3.3V/Gnd power but there is only one 3.3V pin on the PICO. An easy way to connect everything together is to use a breadboard.   
+N.B. Be aware that three devices need to be connected to the PICO W. This means 3 pairs of connections to the 3.3V/Gnd power are required, but, there is only one 3.3V pin on the PICO. An easy way to connect everything together is to use a breadboard.   
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
