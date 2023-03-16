@@ -1,5 +1,5 @@
 # PICO-W--Micropython-examples-
-For the RP2040 W - A collection of Micropython programs.
+For the PICO W (RP2040 with WIFI) - A collection of Micropython programs you can use for some modules.
 
 N.B. Three decices need to be connected to the PICO W, that means 3 pairs of connections to the 3.3V/Gnd power but there is only one 3.3V pin on the PICO. An easy way to connect everything together is to use a breadboard.   
 
