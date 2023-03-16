@@ -6,6 +6,7 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
 
 N.B. Be aware that as there are three devices that need to be connected to the PICO W, this means 3 pairs of connections to the 3.3V/Gnd power are required.
 However, there is only one 3.3V pin on the PICO so rather than using a breadboard, consider creating a split power harness (i.e. 1 pair in, 3 pairs out).
+
 If you don't want to do this, consider using a breadboard to connect everything together, but you might need to add 1K pullup resistors to the SDA and SCL lines.
 N.B. Using a split power harness and separate wires, I found dn that I did not need to add pull up resistors, but consider that your luck may vary
 
