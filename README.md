@@ -4,7 +4,9 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs you can
  - BNO0055 module
  - GPS Module
 
-N.B. Be aware that three devices need to be connected to the PICO W. This means 3 pairs of connections to the 3.3V/Gnd power are required, but, there is only one 3.3V pin on the PICO. An easy way to connect everything together is to use a breadboard.   
+N.B. Be aware that three devices need to be connected to the PICO W. This means 3 pairs of connections to the 3.3V/Gnd power are required, but, there is only one 3.3V pin on the PICO. Rather than using a breadboard, consider creating a split power harness i.e. 1 pair in, 3 pairs out.
+
+N.B. I did not need to add pull up resistors to the SDA and SCL line, consider that your luck may vary
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
