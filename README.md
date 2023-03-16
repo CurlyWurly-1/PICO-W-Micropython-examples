@@ -1,12 +1,13 @@
-# PICO-W--Micropython-examples-
-For the PICO W (RP2040 with WIFI) - A collection of Micropython programs you can use for the following modules:
+# PICO-W-Micropython-examples-
+For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that you can use for the following modules:
  - OLED (size 1.3 - that uses the SH1106 driver instead of the SSD1306 driver).
  - BNO0055 module
  - GPS Module
 
-N.B. Be aware that three devices need to be connected to the PICO W. This means 3 pairs of connections to the 3.3V/Gnd power are required, but, there is only one 3.3V pin on the PICO. Rather than using a breadboard, consider creating a split power harness i.e. 1 pair in, 3 pairs out.
-
-N.B. I did not need to add pull up resistors to the SDA and SCL line, consider that your luck may vary
+N.B. Be aware that as there are three devices that need to be connected to the PICO W, this means 3 pairs of connections to the 3.3V/Gnd power are required.
+However, there is only one 3.3V pin on the PICO so rather than using a breadboard, consider creating a split power harness (i.e. 1 pair in, 3 pairs out).
+If you don't want to do this, consider using a breadboard to connect everything together, but you might need to add 1K pullup resistors to the SDA and SCL lines.
+N.B. Using a split power harness and separate wires, I found dn that I did not need to add pull up resistors, but consider that your luck may vary
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
