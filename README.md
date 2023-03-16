@@ -1,5 +1,8 @@
 # PICO-W--Micropython-examples-
-For the PICO W (RP2040 with WIFI) - A collection of Micropython programs you can use for some modules.
+For the PICO W (RP2040 with WIFI) - A collection of Micropython programs you can use for the following modules:
+ - OLED (size 1.3 - that uses the SH1106 driver instead of the SSD1306 driver).
+ - BNO0055 module
+ - GPS Module
 
 N.B. Three decices need to be connected to the PICO W, that means 3 pairs of connections to the 3.3V/Gnd power but there is only one 3.3V pin on the PICO. An easy way to connect everything together is to use a breadboard.   
 
