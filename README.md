@@ -17,7 +17,7 @@ If you don't want to do this, you could use a breadboard, but you might find you
 
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK (instead of the I2C0 bus).
 
-Be aware, that if you wanted to make a permanent installation of the programs/circuits, you do really need to add a Pullup 1K resistor to the SDA and also the SCL line 
+Be aware, that if you wanted to make a permanent installation of the programs/circuits, you do really need to add a Pullup 1K resistor to the SDA and also another Pullup 1K resistor to the SCL line 
 
 # The "EIO" Error
 This happens with I2S devices. 
