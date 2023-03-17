@@ -9,9 +9,9 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
 _(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)_
 
 
-The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. On your own webpage, display the Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this adaption, knowing that your modules are already connected up and working OK. 
+The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. You own "thing" could be a webpage that displays the Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. All you have to do is follow Steps 1 to 4 (as outlined below)
 
-I hope you have as much fun with this as I have had in creating the repo. 
+I hope you have as much fun using this, as I have had in creating the repo. 
 
 To get the programs installed, use software called "Thonny" https://thonny.org/  to copy the content of directory "PICO_programs" from this repo to your PICO W i.e. Copy all the files one by one until what you see in your PICO W is this
  - The main directory in your PICO W contain 10 programs and new directory called "lib"
