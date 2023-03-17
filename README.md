@@ -35,7 +35,7 @@ I'm thinking that when you have decided on your final circuit arrangement, this 
 
 ## Step 1 - Attach OLED and execute "oled_sh1106.py"  
 This tests the 1.3 OLED Display that uses a SH1106 driver instead of SSD1306 driver
-
+<img src="/images/oled_1_3_SH1106.jpg" alt="OLED"/>
 Attach 1.3 OLED module as follows
  - 3.3V power   -> pin 37 (3v3_en)
  - Grnd         -> pin 38 (Gnd) 
@@ -44,7 +44,7 @@ Attach 1.3 OLED module as follows
 
 ## Step 2 - Attach GPS module and execute "gpsDisplay.py" 
 This tests both the GPS Module and the OLED
-
+<img src="/images/gps module.jpg" alt="GPS Module"/>
 Attach GPS Module as follows
  - 3.3V power   -> pin 37 (3v3_en)
  - Grnd         -> pin 38 (Gnd) 
@@ -53,13 +53,17 @@ Attach GPS Module as follows
 
 ## Step 3 - Attach BNO0055 and execute "bno055_test.py" 
 This tests the BNO055 module and outputs to serial
+<img src="/images/BNO055.jpg" alt="BNO055"/>
+Attach BNO055 Module as follows
  - 3.3V power   -> pin 37 (3v3_en)
  - Grnd         -> pin 38 (Gnd) 
  - SDA          -> pin 19 (GP14)
  - SCL          -> pin 20 (GP15)
 
 ## Step 4 - Attach BME280 and execute "bme280_test.py" 
-This tests the BNO055 module and outputs to serial
+This tests the BME280 module and outputs to serial
+<img src="/images/bme280.jpg" alt="BME280"/>
+Attach BME280 Module as follows
  - 3.3V power   -> pin 37 (3v3_en)
  - Grnd         -> pin 38 (Gnd) 
  - SDA          -> pin  9 (GP6)
@@ -78,17 +82,3 @@ This is a general use UART (TX/RX) program. If it receives anything, it prints t
 This will set up a webserver page where you can control the onboard (green) LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules). When the program executes, it will try to connect to your wifi. If it connects, the serial window will display the IP address that has been assigned. Go to a web browser and enter this IP address (it will be something like http://192.168.1.XXX where you have to change the last three digits). This IP address will show a webpage with two buttons. If you press the appropriate button, you can switch the onboard green LED on and off. On occasions, there is a socket error with this webpage. If you get this error jsut delete your web browser cache and reset the PICOW. I believe there is limit of 4 people being able to access the webpage at the same time.
 
 N.B. the webpage that you see, is parsed from "index.html". You can adapt "index.html" to show whatever you want, as long as the buttons still work
-
-
-## Module Pictures
-### OLED 1.3 (SH1106)
-<img src="/images/oled_1_3_SH1106.jpg" alt="OLED"/>
-
-### GPS Module)
-<img src="/images/gps module.jpg" alt="GPS Module"/>
-
-### BNO055
-<img src="/images/BNO055.jpg" alt="BNO055"/>
-
-### BME280
-<img src="/images/bme280.jpg" alt="BME280"/>
