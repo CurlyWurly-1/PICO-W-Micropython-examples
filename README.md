@@ -9,9 +9,14 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
 _(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)_
 
 
-The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. On your own webpage, display the Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this adaption, knowing that your modules are already connected up and working OK. I hope you have as much fun with this as I have had in creating the repo. 
+The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. On your own webpage, display the Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this adaption, knowing that your modules are already connected up and working OK. 
 
-To get the programs installed, reflect the content structure in this repo's directory called "PICO_programs" into your PICO W using Thonny i.e. Move the files one by one until the main directory in your PICOW contain 10 programs, and a new directory called "lib" contains 4 programs. You can create the files and folders in your PICOW using the software called "Thonny" https://thonny.org/  
+I hope you have as much fun with this as I have had in creating the repo. 
+
+To get the programs installed, use software called "Thonny" https://thonny.org/  to copy the content of directory "PICO_programs" from this repo to your PICO W i.e. Copy all the files one by one until what you see in your PICO W is this
+ - The main directory in your PICO W contain 10 programs and new directory called "lib"
+ - The directory "lib" contains 4 programs. 
+ N.B. "Thonny" enables you to create all the files and folders in your PICO W, but because there is no "global copy" option in "Thonny", you will have to specifically copy each program one by one. 
 
 N.B. This page assumes that you have already set up your PICO W with the correct firmware, you have installed "Thonny" in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to g0ggle). Once you have completed the setup, come back here for these programs.  
 
