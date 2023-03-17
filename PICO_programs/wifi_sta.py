@@ -4,7 +4,7 @@ import ubinascii
 import machine
 import urequests as requests
 import time
-from secrets import artifacts/secrets
+from secrets import secrets
 import socket
 
 
@@ -106,7 +106,7 @@ while True:
             print('LED OFF')
             led.value(0)
             
-        response = get_html('artifacts/index.html')
+        response = get_html('index.html')
         cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
         cl.send(response)
         cl.close()
