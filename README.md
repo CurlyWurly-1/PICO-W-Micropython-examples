@@ -1,5 +1,5 @@
 # PICO-W-Micropython-examples
-For the PICO W (RP2040 with WIFI) - A collection of 8 Micropython programs that you can use for the following modules:
+This is a collection of 8 Micropython programs that you can use on a PICO W (RP2040 with WIFI) for the following modules:
  - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
  - GPS Module      - GPS co-ordinates
  - BNO0055 module  - 6 axis Gyro
