@@ -49,3 +49,15 @@ This tests the BNO055 module and outputs to serial
  - Grnd         -> pin 38 (Gnd) 
  - SDA          -> pin  9 (GP6)
  - SCL          -> pin 10 (GP7)
+
+# Other program 1 - "i2sScan.py"
+This scans for any connected I2S modules. You do have to configure it to listen on various pin pairs.
+
+# Other program 2 - "netScan.py"
+This sniffs for wifi access points and lists any SSID found (It doesn't need any modules).
+
+# Other program 3 - "uart.py"
+This is a general use UART (TX/RX) program. If it receives anything, it prints to serial. You can configure it to listen on various pin pairs and at different BAUD rates
+
+# Other program 4 - "wifi_sta"
+This will set up a webserver page where you can control the onboard LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules)
