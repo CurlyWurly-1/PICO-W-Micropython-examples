@@ -34,9 +34,9 @@ I'm thinking that when you have decided on your final circuit arrangement, this 
 
 
 ## Step 1 - Attach OLED and execute "oled_sh1106.py"  
-This tests the 1.3 OLED Display that uses a SH1106 driver instead of SSD1306 driver
-
 <img src="/images/oled_1_3_SH1106.jpg" alt="OLED"/>
+
+This tests the 1.3 OLED Display that uses a SH1106 driver instead of SSD1306 driver
 
 Attach 1.3 OLED module as follows
  - 3.3V power   -> pin 37 (3v3_en)
@@ -45,9 +45,9 @@ Attach 1.3 OLED module as follows
  - SCL          -> pin 15 (GP11)
 
 ## Step 2 - Attach GPS module and execute "gpsDisplay.py" 
-This tests both the GPS Module and the OLED
-
 <img src="/images/gps module.jpg" alt="GPS Module"/>
+
+This tests both the GPS Module and the OLED
 
 Attach GPS Module as follows
  - 3.3V power   -> pin 37 (3v3_en)
@@ -56,9 +56,9 @@ Attach GPS Module as follows
  - TX           -> pin 12 (GP9)
 
 ## Step 3 - Attach BNO0055 and execute "bno055_test.py" 
-This tests the BNO055 module and outputs to serial
-
 <img src="/images/BNO055.jpg" alt="BNO055"/>
+
+This tests the BNO055 module and outputs to serial
 
 Attach BNO055 Module as follows
  - 3.3V power   -> pin 37 (3v3_en)
@@ -67,9 +67,9 @@ Attach BNO055 Module as follows
  - SCL          -> pin 20 (GP15)
 
 ## Step 4 - Attach BME280 and execute "bme280_test.py" 
-This tests the BME280 module and outputs to serial
-
 <img src="/images/bme280.jpg" alt="BME280"/>
+
+This tests the BME280 module and outputs to serial
 
 Attach BME280 Module as follows
  - 3.3V power   -> pin 37 (3v3_en)
