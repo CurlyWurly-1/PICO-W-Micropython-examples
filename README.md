@@ -4,6 +4,7 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
  - GPS Module      - GPS co-ordinates
  - BNO0055 module  - 6 axis Gyro
  - BME280 module   - Temp, pressure, Humidity
+ - On-board Wifi 
 
 The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. display the temperature or compass heading on your own webpage. The main thing is that you can do this knowing that the modules are all connected correctly and working OK.  
 
