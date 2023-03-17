@@ -20,9 +20,9 @@ In my case, to supply power to each module I constructed a 3.3V/GND harness out 
 Be aware, that if you wanted to make a permanent installation of the programs/circuits, you do really need to add a Pullup 1K resistor to the SDA and also another Pullup 1K resistor to the SCL line 
 
 # The "EIO" Error
-This happens with I2S devices. 
+This only happens with I2C device circuits. 
 
-If you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable) and restarting the backend in Thonny (press the red "Stop/Restart" button in the menu bar). This seemed to temporarily fix the problem for me. The error mostly occurs in the situation when I had pressed "Ctrl/C" in Thonny to stop a program executing, and then tried to load/execute another program, with the error occuring just at the start when executing the new program. Disconnecting and reconnecting power, and pressing the red "stop/Restart" button in Thonny seemed to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2S device, it seems you have to repeat this annoying workaround fix. 
+If you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable) and restarting the backend in Thonny (press the red "Stop/Restart" button in the menu bar). This seemed to temporarily fix the problem for me. The error mostly occurs in the situation when I had pressed "Ctrl/C" in Thonny to stop a program executing, and then tried to load/execute another program, with the error occuring just at the start when executing the new program. Disconnecting and reconnecting power, and pressing the red "stop/Restart" button in Thonny seemed to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2C device, it seems you have to repeat this annoying workaround fix. 
 I'm thinking that when you have decided on your final circuit arrangement, this strange effect does not occur, but for permanent circuits, add your pull up resistors!!    
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
