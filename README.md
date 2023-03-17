@@ -16,7 +16,9 @@ In my case, to supply power to each module I constructed a 3.3V/GND harness out 
 If you wanted to make a permanent installation of the programs/circuits. you really should add a Pullup 1K resistor to both the SDA and SCL line 
 
 # The "EIO" Error
-If you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable) and restarting the backend in Thonny (press the red "Stop/Restart" button in the menu bar). This seemed to temporarily fix the problem for me. The error mostly occurs in the situation when I had pressed "Ctrl/C" in Thonny to stop a program executing, and then tried to load/execute another program, with the error occuring just at the start when executing the new program. Disconnecting and reconnecting power, and pressing the red "stop/Restart" button in Thonny seemed to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you oad/execute yet another program which uses a different device, it seems you have to repeat this annoying workaround fix. 
+This happens with I2S devices. 
+
+If you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable) and restarting the backend in Thonny (press the red "Stop/Restart" button in the menu bar). This seemed to temporarily fix the problem for me. The error mostly occurs in the situation when I had pressed "Ctrl/C" in Thonny to stop a program executing, and then tried to load/execute another program, with the error occuring just at the start when executing the new program. Disconnecting and reconnecting power, and pressing the red "stop/Restart" button in Thonny seemed to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2S device, it seems you have to repeat this annoying workaround fix. I guess when you have decided on your final circuit arrangement, this strange effect does not occur.    
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
