@@ -11,6 +11,7 @@ Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadb
 If you don't want to do this, you could use a breadboard, but you might find you need to add 1K pullup resistors to the SDA and SCL lines (to 3.3V). These pullup resistors may be necessary to counteract the effect of capacitance between the breadboard lines which lowers the impedance between pins at high frequency (e.g. when set at 400,000).
 
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK.
+If you wanted to make a permanent installation of the programs/circuits. you really should add a Pullup 1K resistor to both the SDA and SCL line 
 
 Also, if you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable). This fixed the problem for me. The error seems to occur when you press "Ctrl/C" in Thonny to stop a program, and then try to execute another program in Thonny. 
 
