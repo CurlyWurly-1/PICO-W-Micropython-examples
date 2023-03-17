@@ -5,7 +5,7 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
  - BNO0055 module  - 6 axis Gyro
  - BME280 module   - Temp, pressure, Humidity
 
-N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, this means that 4 pairs of 3.3V/Gnd power connections will be required.
+N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
 
 If you don't want to do this, you could use a breadboard, but you might find you need to add 1K pullup resistors to the SDA and SCL lines (to 3.3V). These pullup resistors may be necessary to counteract the effect of capacitance between the breadboard lines which lowers the impedance between pins at high frequency (e.g. when set at 400,000).
