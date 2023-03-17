@@ -60,4 +60,4 @@ This sniffs for wifi access points and lists any SSID found (It doesn't need any
 This is a general use UART (TX/RX) program. If it receives anything, it prints to serial. You can configure it to listen on various pin pairs and at different BAUD rates
 
 # Other program 4 - "wifi_sta"
-This will set up a webserver page where you can control the onboard LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules)
+This will set up a webserver page where you can control the onboard LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules). Once the program connects to wifi, the serial will display the IP that has been assigned. Go to a web browser and enter the IP. it will be something like  http://192.168.1.XXX where you have to change the last three digits. You will then see a webpage with two buttons. If you press the appropriate button, you can switch the onboard green LED on and off
