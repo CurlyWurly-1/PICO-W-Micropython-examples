@@ -1,15 +1,17 @@
 # PICO-W-Micropython-examples
 For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that you can use for the following modules:
- - OLED (size 1.3 - that uses the SH1106 driver instead of the SSD1306 driver).
- - BNO0055 module
- - GPS Module
-
-N.B. Be aware that as there are three devices that need to be connected to the PICO W, this means that 3 pairs of 3.3V/Gnd power connections are required.
-Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 3 pairs out).
+ - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
+ - GPS Module      - GPS co-ordinates
+ - BNO0055 module  - 6 axis Gyro
+ - BME280 module   - Temp, pressure, Humidity
+N.B. Be aware that as there are four devices that need to be connected to the PICO W, this means that 4 pairs of 3.3V/Gnd power connections are required.
+Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
 
 If you don't want to do this, you could use a breadboard, but you might find you need to add 1K pullup resistors to the SDA and SCL lines (to 3.3V). These resistors may be necessary to counteract the effect of capacitance between the breadboard lines lowering the impedance between pins at high frequency (e.g. when set at 400,000).
 
-In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to separate the I2C busses for the BNO055 to work OK. You will notice that I2C0 was used for the OLED, and I2C1 for the BNO055.
+In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 buss for the modules to work OK.
+
+Also, if you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable). This fixed the problem for me. The error seems to occur when you "Ctrl/C" a program in Thonny, try to execute another program in Thonny. 
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
