@@ -6,12 +6,14 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
  - BME280 module   - Temp, pressure, Humidity
  - On-board Wifi 
 
-**(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)**
+_(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)_
 
 
 The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. On your own webpage, display the Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this adaption, knowing that your modules are already connected up and working OK. I hope you have as much fun with this as I have had in creating the repo. 
 
-To get the programs installed, reflect the content structure in directory "PICO_programs" in your PICO W using Thonny i.e. the main directory in your PICOW will contain 9 programs, and a new directory called "lib" will contain 4 programs. Creating the files and folders in your PICOW can all be done in Thonny 
+To get the programs installed, reflect the content structure in directory "PICO_programs" in your PICO W using Thonny i.e. the main directory in your PICOW will contain 9 programs, and a new directory called "lib" will contain 4 programs. Creating the files and folders in your PICOW can all be done in Thonny. 
+
+N.B. This page assumes that you have already set up your PICO W with the correct firmware, and that it is communicating OK with the Thonny software that you are executing on your desktop. If this still hasn't been done, please refer first to the PICO W setup instructions with Thonny (easy enough to g0ggle). Once you have completed this, come back here for these programs.  
 
 N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
