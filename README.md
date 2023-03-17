@@ -1,5 +1,5 @@
 # PICO-W-Micropython-examples
-For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that you can use for the following modules:
+For the PICO W (RP2040 with WIFI) - A collection of 8 Micropython programs that you can use for the following modules:
  - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
  - GPS Module      - GPS co-ordinates
  - BNO0055 module  - 6 axis Gyro
@@ -8,18 +8,13 @@ For the PICO W (RP2040 with WIFI) - A collection of Micropython programs that yo
 
 _(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)_
 
-
 The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. Your own webpage that displays values of Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. All you have to do is follow Steps 1 to 4 (as outlined below)
 
-I hope you have as much fun using this, as I have had in creating the repo. 
+N.B. This page assumes that you have already set up your PICO W with the correct firmware, that you have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
 
-To get the programs installed, use software called "Thonny" https://thonny.org/  to copy the content of directory "PICO_programs" from this repo to your PICO W i.e. Copy all the files one by one until what you see in your PICO W is this
+N.B. Whilst "Thonny" enables you to create all the files and folders that you need into your PICO W, there is no "global copy" option. This means you will have to copy each program one by one until what you see in your PICO reflects the content of directory "PICO_programs" from this repo. To do this, copy all the files until what you see in your PICO W is this:
  - The main directory in your PICO W contain 9 programs, a file called "index.html" and a new directory called "lib"
  - The directory "lib" contains 4 programs. 
-
-N.B. "Thonny" enables you to create all the files and folders in your PICO W, but because there is no "global copy" option in "Thonny", you will have to specifically copy each program one by one. 
-
-N.B. This page assumes that you have already set up your PICO W with the correct firmware, you have installed "Thonny" in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to g0ggle). Once you have completed the setup, come back here for these programs.  
 
 N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
