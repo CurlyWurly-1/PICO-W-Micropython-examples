@@ -14,7 +14,7 @@ The purpose of this page is to enable you to get started using these modules. On
 I hope you have as much fun using this, as I have had in creating the repo. 
 
 To get the programs installed, use software called "Thonny" https://thonny.org/  to copy the content of directory "PICO_programs" from this repo to your PICO W i.e. Copy all the files one by one until what you see in your PICO W is this
- - The main directory in your PICO W contain 10 programs and new directory called "lib"
+ - The main directory in your PICO W contain 9 programs, a file called "index.html" and a new directory called "lib"
  - The directory "lib" contains 4 programs. 
 
 N.B. "Thonny" enables you to create all the files and folders in your PICO W, but because there is no "global copy" option in "Thonny", you will have to specifically copy each program one by one. 
