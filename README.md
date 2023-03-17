@@ -39,10 +39,10 @@ I'm thinking that when you have decided on your final circuit arrangement, this 
 This tests the 1.3 OLED Display that uses a SH1106 driver instead of SSD1306 driver
 
 Attach 1.3 OLED module as follows
- - VCC          -> pin 37 (3v3_en)
  - GND          -> pin 38 (Gnd) 
- - SDA          -> pin 14 (GP10)
+ - VCC          -> pin 37 (3v3_en)
  - SCL          -> pin 15 (GP11)
+ - SDA          -> pin 14 (GP10)
 
 ## Step 2 - Attach GPS module and execute "gpsDisplay.py" 
 <img src="/images/gps module.jpg" alt="GPS Module"/>
@@ -51,9 +51,9 @@ This tests both the GPS Module and the OLED
 
 Attach GPS Module as follows
  - VCC          -> pin 37 (3v3_en)
- - GND          -> pin 38 (Gnd) 
  - RX           -> pin 11 (GP8)
  - TX           -> pin 12 (GP9)
+ - GND          -> pin 38 (Gnd) 
 
 ## Step 3 - Attach BNO0055 and execute "bno055_test.py" 
 <img src="/images/BNO055.jpg" alt="BNO055"/>
@@ -63,8 +63,8 @@ This tests the BNO055 module and outputs to serial
 Attach BNO055 Module as follows
  - VIN          -> pin 37 (3v3_en)
  - GND          -> pin 38 (Gnd) 
- - SDA/Tx       -> pin 19 (GP14)
  - SCL/Rx       -> pin 20 (GP15)
+ - SDA/Tx       -> pin 19 (GP14)
 
 ## Step 4 - Attach BME280 and execute "bme280_test.py" 
 <img src="/images/bme280.jpg" alt="BME280"/>
@@ -74,8 +74,8 @@ This tests the BME280 module and outputs to serial
 Attach BME280 Module as follows
  - VIN          -> pin 37 (3v3_en)
  - GND          -> pin 38 (Gnd) 
- - SDA          -> pin  9 (GP6)
  - SCL          -> pin 10 (GP7)
+ - SDA          -> pin  9 (GP6)
 
 ## Other program 1 - "i2sScan.py"
 This scans for any connected I2S modules. You do have to configure it to listen on various pin pairs.
