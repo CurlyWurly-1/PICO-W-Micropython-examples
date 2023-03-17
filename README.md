@@ -39,8 +39,8 @@ I'm thinking that when you have decided on your final circuit arrangement, this 
 This tests the 1.3 OLED Display that uses a SH1106 driver instead of SSD1306 driver
 
 Attach 1.3 OLED module as follows
- - 3.3V power   -> pin 37 (3v3_en)
- - Grnd         -> pin 38 (Gnd) 
+ - VCC          -> pin 37 (3v3_en)
+ - GND          -> pin 38 (Gnd) 
  - SDA          -> pin 14 (GP10)
  - SCL          -> pin 15 (GP11)
 
@@ -50,8 +50,8 @@ Attach 1.3 OLED module as follows
 This tests both the GPS Module and the OLED
 
 Attach GPS Module as follows
- - 3.3V power   -> pin 37 (3v3_en)
- - Grnd         -> pin 38 (Gnd) 
+ - VCC          -> pin 37 (3v3_en)
+ - GND          -> pin 38 (Gnd) 
  - RX           -> pin 11 (GP8)
  - TX           -> pin 12 (GP9)
 
@@ -61,10 +61,10 @@ Attach GPS Module as follows
 This tests the BNO055 module and outputs to serial
 
 Attach BNO055 Module as follows
- - 3.3V power   -> pin 37 (3v3_en)
- - Grnd         -> pin 38 (Gnd) 
- - SDA          -> pin 19 (GP14)
- - SCL          -> pin 20 (GP15)
+ - VIN          -> pin 37 (3v3_en)
+ - GND          -> pin 38 (Gnd) 
+ - SDA/Tx       -> pin 19 (GP14)
+ - SCL/Rx       -> pin 20 (GP15)
 
 ## Step 4 - Attach BME280 and execute "bme280_test.py" 
 <img src="/images/bme280.jpg" alt="BME280"/>
@@ -72,8 +72,8 @@ Attach BNO055 Module as follows
 This tests the BME280 module and outputs to serial
 
 Attach BME280 Module as follows
- - 3.3V power   -> pin 37 (3v3_en)
- - Grnd         -> pin 38 (Gnd) 
+ - VIN          -> pin 37 (3v3_en)
+ - GND          -> pin 38 (Gnd) 
  - SDA          -> pin  9 (GP6)
  - SCL          -> pin 10 (GP7)
 
