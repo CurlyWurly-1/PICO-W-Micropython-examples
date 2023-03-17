@@ -15,7 +15,7 @@ If you don't want to do this, you could use a breadboard, but you might find you
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK.
 If you wanted to make a permanent installation of the programs/circuits. you really should add a Pullup 1K resistor to both the SDA and SCL line 
 
-Also, if you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable). This fixed the problem for me. The error seems to occur when you press "Ctrl/C" in Thonny to stop a program, and then try to execute another program in Thonny. 
+Also, if you get the "EIO" error, try disconnecting and reconnecting power to the PICOW (i.e. pull out and push back in the USB cable). This fixed the problem for me whenever I encountered this random error. It seemed to occur in the situation when I had pressed "Ctrl/C" in Thonny to stop a program executing, and then tried to execute another program in Thonny with the error occuring when trying to execute the new program. Disconnecting and reconnecting power and pressing the red "stop/Restart" button in Thonny seemed to reset things with the "EIO" error no longer happeneing with the new program. Of course, if you change the program again, youi may have to repeat this annoying workaround fix. 
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
