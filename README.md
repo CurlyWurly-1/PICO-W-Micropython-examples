@@ -16,7 +16,8 @@ I hope you have as much fun using this, as I have had in creating the repo.
 To get the programs installed, use software called "Thonny" https://thonny.org/  to copy the content of directory "PICO_programs" from this repo to your PICO W i.e. Copy all the files one by one until what you see in your PICO W is this
  - The main directory in your PICO W contain 10 programs and new directory called "lib"
  - The directory "lib" contains 4 programs. 
- N.B. "Thonny" enables you to create all the files and folders in your PICO W, but because there is no "global copy" option in "Thonny", you will have to specifically copy each program one by one. 
+
+N.B. "Thonny" enables you to create all the files and folders in your PICO W, but because there is no "global copy" option in "Thonny", you will have to specifically copy each program one by one. 
 
 N.B. This page assumes that you have already set up your PICO W with the correct firmware, you have installed "Thonny" in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to g0ggle). Once you have completed the setup, come back here for these programs.  
 
