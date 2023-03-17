@@ -2,6 +2,9 @@
 # https://github.com/micropython-IMU/micropython-bno055
 # Copyright (c) Peter Hinch 2019
 # Released under the MIT licence.
+# Remember - The pin numbers are the GP numbers e.g. pin(10) is really GP10
+# Remember - Use the I2C1 bus - I2C0 seems to give "EIO" problems
+# Remember - If you have "EIO" problems, try disconnecting and reconnecting power to PICO, and then re-execute program
 
 import machine
 import time
