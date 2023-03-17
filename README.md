@@ -78,15 +78,15 @@ Attach BME280 Module as follows
  - SDA          -> pin  9 (GP6)
 
 ## Other program 1 - "i2sScan.py"
-This scans for any connected I2S modules. You do have to configure it to listen on various pin pairs.
+**i2sScan.py** scans for any connected I2S modules. You do have to configure it to listen on various pin pairs.
 
 ## Other program 2 - "netScan.py"
-This sniffs for wifi access points and lists any SSID found (It doesn't need any modules).
+**netScan.py** sniffs for wifi access points and lists any SSID found (It doesn't need any modules).
 
 ## Other program 3 - "uart.py"
-This is a general use UART (TX/RX) program. If it receives anything, it prints to serial. You can configure it to listen on various pin pairs and at different BAUD rates
+**uart.py** is a general use UART (TX/RX) program. If it receives anything, it prints to serial. You can configure it to listen on various pin pairs and at different BAUD rates
 
-## Other program 4 - "wifi_sta"
-This will set up a webserver page where you can control the onboard (green) LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules). When the program executes, it will try to connect to your wifi. If it connects, the serial window will display the IP address that has been assigned. Go to a web browser and enter this IP address (it will be something like http://192.168.1.XXX where you have to change the last three digits). This IP address will show a webpage with two buttons. If you press the appropriate button, you can switch the onboard green LED on and off. If you are changing the program and retesting, there is sometimes a socket error with this webpage. If you get this error, just delete the cache of your web browser and disconnect/reconnect  the PICO W. Also, be aware that there is supposed to be a limit of 4 people being able to access the webpage at the same time.
+## Other program 4 - "wifi_sta.py"
+**wifi_sta.py** will set up a webserver page where you can control the onboard (green) LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules). When the program executes, it will try to connect to your wifi. If it connects, the serial window will display the IP address that has been assigned. Go to a web browser and enter this IP address (it will be something like http://192.168.1.XXX where you have to change the last three digits). This IP address will show a webpage with two buttons. If you press the appropriate button, you can switch the onboard green LED on and off. If you are changing the program and retesting, there is sometimes a socket error with this webpage. If you get this error, just delete the cache of your web browser and disconnect/reconnect  the PICO W. Also, be aware that there is supposed to be a limit of 4 people being able to access the webpage at the same time.
 
 N.B. the webpage that you see, is parsed from "index.html". You can adapt "index.html" to show whatever you want, as long as the buttons still work
