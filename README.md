@@ -1,5 +1,5 @@
 # PICO-W-Micropython-examples
-This is a collection of 8 Micropython programs that you can use on a PICO W (RP2040 with WIFI) for the following modules:
+This is a collection of 9 Micropython programs that you can use on a PICO W (RP2040 with WIFI) for the following modules:
  - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
  - GPS Module      - GPS co-ordinates
  - BNO0055 module  - 6 axis Gyro
@@ -13,7 +13,7 @@ The purpose of this page is to enable you to get started using these modules. On
 N.B. This page assumes that you have already set up your PICO W with the correct firmware, that you have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
 
 N.B. Whilst "Thonny" enables you to create all the files and folders that you need into your PICO W, there is no "global copy" option. This means you will have to copy each program one by one until what you see in your PICO reflects the content of directory "PICO_programs" from this repo. To do this, download the zip file, unzip it and copy all the content from directory "PICO_programs" to your PICO W until what you see in your PICO W is this:
- - The main directory in your PICO W contain 9 programs, a file called "index.html" and a new directory called "lib"
+ - The main directory in your PICO W contain 10 programs, two files called "index.html" and "windex.html" with a new directory called "lib"
  - The directory "lib" contains 4 programs. 
 
 N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
@@ -88,6 +88,11 @@ Attach BME280 Module as follows
 **uart.py** is a general use UART (TX/RX) program. If it receives anything, it prints to serial. You can configure it to listen on various pin pairs and at different BAUD rates
 
 ## Other program 4 - "wifi_sta.py"
-**wifi_sta.py** will set up a webserver page where you can control the onboard (green) LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules). When the program executes, it will try to connect to your wifi. If it connects, the serial window will display the IP address that has been assigned. Go to a web browser and enter this IP address (it will be something like http://192.168.1.XXX where you have to change the last three digits). This IP address will show a webpage with two buttons. If you press the appropriate button, you can switch the onboard green LED on and off. If you are changing the program and retesting, there is sometimes a socket error with this webpage. If you get this error, just delete the cache of your web browser and disconnect/reconnect  the PICO W. Also, be aware that there is supposed to be a limit of 4 people being able to access the webpage at the same time.
+**wifi_sta.py** will set up a webserver page where you can control the onboard (green) LED on or off. You first need to modify the code in "secrets.py" with your SSID and SSID password. (It doesn't need any modules). When the program executes, it will try to connect to your wifi. If it connects, the serial window will display the IP address that has been assigned. Go to a web browser and enter this IP address (it will be something like http://192.168.1.XXX where you have to change the last three digits). This IP address will show a webpage with two buttons. If you press the appropriate button, you can switch the onboard green LED on and off. If you are changing the program and retesting, there is sometimes a socket error with this webpage. If you get this error, just delete the cache of your web browser, disconnect/reconnect the PICO W and wait 10 seconds. Also, be aware that there is supposed to be a limit of 4 people being able to access the webpage at the same time.
 
 N.B. the webpage that you see, is parsed from "index.html". You can adapt "index.html" to show whatever you want, as long as the buttons still work
+
+## Other program 5 - "weatherStation.py"
+**weatherStation.py** will set up a webserver page where you can see the values coming from the BME280 module. If you haven't already done so, you first need to modify the code in "secrets.py" with your SSID and SSID password. When the program executes, it will try to connect to your wifi. If it connects, the serial window will display the IP address that has been assigned. Go to a web browser and enter this IP address (it will be something like http://192.168.1.XXX where you have to change the last three digits). If you are changing the program and retesting, there is sometimes a socket error with this webpage. If you get this error, just delete the cache of your web browser, disconnect/reconnect the PICO W and wait about 10 seconds. Also, be aware that there is supposed to be a limit of 4 people being able to access the webpage at the same time.
+
+N.B. the webpage that you see, is parsed from "windex.html". You can adapt "windex.html" to show whatever you want. If you want to add more variables, look for how "%%i1" is treated in program "weatherStation.py", and where it is defined "Windex.html" 
