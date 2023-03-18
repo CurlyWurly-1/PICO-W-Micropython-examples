@@ -12,7 +12,7 @@ The purpose of this page is to enable you to get started using these modules. On
 
 N.B. This page assumes that you have already set up your PICO W with the correct firmware, that you have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
 
-N.B. To install the files, download the zip file of this repo, unzip it and copy all the content from directory "PICO_programs" to your PICO. Remember that in Thonny, press "View" -> "Files" to bring up the sidebar, with which you can easily mass copy. Copy all the files until you see the following in your PICO W memory:
+N.B. To install the files, first download the zip file of this repo and unzip it. In Thonny, press "View" -> "Files" to bring up the copy sidebar and copy all the content from the downloaded directory called "PICO_programs" to your PICO W. Do this until you see the following content in your PICO W memory:
  - The main directory in your PICO W contain 10 programs, two files called "index.html" and "windex.html" with a new directory called "lib"
  - The directory "lib" contains 4 programs. 
 
