@@ -13,8 +13,8 @@ The purpose of this page is to enable you to get started using these modules. On
 N.B. This page assumes that you have already set up your PICO W with the correct firmware, that you have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
 
 N.B. To install the files, first download the zip file of this repo and unzip it. In Thonny, press "View" -> "Files" to bring up the copy sidebar and copy all the content from the downloaded directory called "PICO_programs" to your PICO W. Do this until you see the following content in your PICO W memory:
- - The main directory in your PICO W contain 10 programs, two files (called "index.html" and "windex.html") and a new directory called "lib"
- - The directory "lib" contains 4 programs. 
+ - The main directory in your PICO W contains 10 Micropython programs, two HTML files (called "index.html" and "windex.html") and a new directory called "lib"
+ - The directory "lib" contains 4 Micropython programs. (these 4 programs can also be seen if you press "Tools" -> "Manage Packages") 
 
 N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
