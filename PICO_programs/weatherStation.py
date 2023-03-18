@@ -1,7 +1,7 @@
 from machine import Pin, I2C        #importing relevant modules & classes
 
 from time import sleep
-from secrets import secrets
+
 import utime
 import socket
 import network
@@ -14,15 +14,13 @@ def get_html(html_name):
         
     return html
 
+
+
 i2c=I2C(1,sda=Pin(6), scl=Pin(7), freq=400000)
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-
-# Load login data from different file for safety reasons
-ssid = secrets['ssid']
-pw = secrets['pw']
-wlan.connect(ssid, pw)
+wlan.connect("ASUS","Gazprom123")
 
 # Wait for connect or fail
 wait = 10
