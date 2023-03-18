@@ -97,4 +97,4 @@ N.B. the webpage that you see, is parsed from "index.html". You can adapt "index
 
 N.B. the webpage that you see, is parsed from "windex.html". You can adapt "windex.html" to show whatever you want. If you want to add more variables, look for how "%%i1" is treated in program "weatherStation.py", and where it is placed in "windex.html". The idea is that you put placeholder variables in the static html page source, and in the micropython program, the placeholder variables are replaced with the actual values. There is nothing special about using "%%i1" for a placeholder. I've only chosen that sequence of 4 characters because that sequence is unlikely to be elesewhere in the HTML file. Be aware that by using the "replace " comnmand, all occurances of the placeholder variable will be replaced. Make sure you create separately named placeholder variables for each bit you want to change.
 
-N.B. The webpage will refresh every 3 seconds (as defined by the line "conn.settimeout(3.0)" ).  
+N.B. The webpage will refresh every 5 seconds, as defined in the first line of the "windex.html"  ("<meta http-equiv="refresh" content="5">" )
