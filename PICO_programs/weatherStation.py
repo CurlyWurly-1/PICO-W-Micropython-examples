@@ -20,7 +20,7 @@ i2c=I2C(1,sda=Pin(6), scl=Pin(7), freq=400000)
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
-wlan.connect("ASUS","Gazprom123")
+wlan.connect("BT-Wifi1","q1!3£4$5%")
 
 # Wait for connect or fail
 wait = 10
