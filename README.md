@@ -7,14 +7,16 @@ This is a collection of 11 Micropython programs that you can use for the followi
  - BME280 module   - Temp, pressure, Humidity
  - On-board Wifi 
 
-_The programs work on the latest PICO 2 W (RP2350 with wifi) when the above mentioned firmware is used. Please note, these programs also work on the original PICO W (RP2040 with WIFI), but only if the original "uf2" firmware is used (not the one mentioned above!)_
+## Purpose of this repro and how to use it 
+The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. Your own webpage that displays values of Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. 
 
-## Purpose of this repro
-The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. Your own webpage that displays values of Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. All you have to do is follow Steps 1 to 4 (as outlined below)
+All you have to do is methodically follow Steps 1 to 4 as outlined in the below section called **"THE PROGRAMS, HOW TO USE AND THEIR SEQUENCE"** .
 
 ## Firmware
 To get hold of the "PICO 2 W" preview firmware, look at [https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/](https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/)
 where you can [Download "PICO 2 W" uf2 file](https://downloads.raspberrypi.com/micropython/mp_firmware_unofficial_latest.uf2 )
+
+_N.B. All of these programs work on the latest PICO 2 W (RP2350 with wifi) if the above mentioned firmware is used. If you want to use the original PICO W (RP2040 with WIFI), you must load the the original "uf2" firmware into the PICO W (which is NOT the one mentioned above!)_
 
 ## Assumptions
  - This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware, as discussed above.  
@@ -50,7 +52,7 @@ I'm thinking that when you have decided on your final circuit arrangement, this 
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
-# THE PROGRAMS, HOW TO USE AND THE SEQUENCE
+# THE PROGRAMS, HOW TO USE AND THEIR SEQUENCE
 
 ## Step 1 - Attach OLED and execute "oled_sh1106.py"  
 <img src="/images/oled_1_3_SH1106.jpg" alt="OLED"/>
