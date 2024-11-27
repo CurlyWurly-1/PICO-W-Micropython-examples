@@ -46,14 +46,15 @@ else:
 
 # Open socket
 addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('', 80))
-server.listen(5)
+s = socket.socket()
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+s.bind(addr)
+s.listen(5)
 print('listening on', addr)
 hbeat = True
 while True:
     try:
-        conn, addr = server.accept()
+        conn, addr = s.accept()
         conn.settimeout(3.0)
         print('client connected from', addr)
         request = conn.recv(1024)
@@ -92,3 +93,4 @@ while True:
     except OSError as e:
         conn.close()
         print('connection closed') 
+
