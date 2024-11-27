@@ -1,5 +1,5 @@
 # PICO-W-Micropython-examples
-This is a collection of 9 Micropython programs that you can use on a PICO W (RP2040 with WIFI) for the following modules:
+This is a collection of 11 Micropython programs that you can use on either a PICO W (RP2040 with WIFI) or a PICO 2 W (RP2350 with wifi) for the following modules:
  - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
  - GPS Module      - GPS co-ordinates
  - BNO0055 module  - 6 axis Gyro
@@ -10,11 +10,13 @@ _(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2
 
 The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. Your own webpage that displays values of Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. All you have to do is follow Steps 1 to 4 (as outlined below)
 
-N.B. This page assumes that you have already set up your PICO W with the correct firmware, that you have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
+N.B. This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware. Be aware that the PICO 2 W firmware is different to PICO W). You also need to have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W (or PICO 2 W) is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W (or (PICO 2 W) setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
+
+FROM NOW ON, THE TERM "PICO W" WILL BE USED TO DESCRIBE THE "PICO W" or the "PICO 2 W" 
 
 N.B. To install the files, first download the zip file of this repo and unzip it. In Thonny, press "View" -> "Files" to bring up the copy sidebar and copy all the content from the downloaded directory called "PICO_programs" to your PICO W. Do this until you see the following content in your PICO W memory:
- - The main directory in your PICO W contains 10 Micropython programs, two HTML files (called "index.html" and "windex.html") and a new directory called "lib"
- - The directory "lib" contains 4 Micropython programs. (these 4 programs can also be seen if you press "Tools" -> "Manage Packages") 
+ - The main directory in your PICO W contains 11 Micropython programs, two HTML files (called "index.html" and "windex.html") and a new directory called "lib"
+ - The directory "lib" contains 5 Micropython programs. (these 5 programs can also be seen if you press "Tools" -> "Manage Packages") 
 
 N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
@@ -101,3 +103,9 @@ N.B. the webpage that you see, is parsed from "index.html". You can adapt "index
 N.B. the webpage that you see, is parsed from "windex.html". You can adapt "windex.html" to show whatever you want. If you want to add more variables, look for how "%%i1" is treated in program "weatherStation.py", and where it is placed in "windex.html". The idea is that you put placeholder variables in the static html page source, and in the micropython program, the placeholder variables are replaced with the actual values. There is nothing special about using "%%i1" for a placeholder. I've only chosen that sequence of 4 characters because that sequence is unlikely to be elesewhere in the HTML file. Be aware that by using the "replace " command, all occurances of the placeholder variable will be replaced, so make sure there is a separately named placeholder variable for each bit you want to change.
 
 N.B. The webpage will refresh every 5 seconds, as defined in the first line of the "windex.html"  ("meta http-equiv="refresh" content="5" )
+
+## Other program 6 - "blink.py"
+Does what it says - blinks the on-board LED
+
+## Other program 7 - "catfacts.py"
+This retrieves info about cats from the internet, and prints it out 
