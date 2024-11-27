@@ -35,20 +35,26 @@ _N.B. Until the official "micropython" version is released for the "PICO 2 W" , 
 Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
 
-If you don't want to do this, you could use a breadboard, but you might find you need to add 1K pullup resistors to the SDA and SCL lines (to 3.3V). These pullup resistors may be necessary to counteract the effect of capacitance between the breadboard lines which lowers the impedance between pins at high frequency (e.g. when set at 400,000).
-
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK (instead of the I2C0 bus).
 
-Be aware, that if you wanted to make a permanent installation of the programs/circuits, its a good idea to add a Pullup 1K resistor to the SDA, and also another Pullup 1K resistor to the SCL line 
+Be aware, that if you wanted to make a permanent installation of the programs/circuits, its a good idea to add a Pullup 1K resistor to the SDA, and also another Pullup 1K resistor to the SCL line.
+If you are using a breadboard, Adding 1K pullup resistors to the SDA and SCL lines (to 3.3V) is a good idea amd would be quite easy to do. The addition of pullup resistors also helps to counteract any effects of stray capacitance between the breadboard lines lowering the impedance between pins at high frequency e.g. when set at 400,000.
 
 ## The "EIO" Error
 This only happens with I2C device circuits. 
 
-The error mostly occurs in the situation when I had pressed "Ctrl/C" in Thonny to stop a program executing, and then tried to load/execute another program, with the error occuring just at the start when executing the new program. Disconnecting and reconnecting power, and pressing the red "stop/Restart" button in Thonny seemed to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2C device, it seems you have to repeat this annoying workaround fix. However, you also need to ensure you do the following while you are developing your code: 
+Whilst this error can occur if the sensor is just not connected up, I did find that the error also occurs in the following situation:
+ - The sensor is wired up OK
+ - I pressed Run (the program works OK)
+ - I pressed "Ctrl/C" in Thonny to stop a program executing
+ - I load/execute another program and the "EIO" error occurs just at the start (when executing the new program).
+ne way to fix this is to disconnect and reconnect the USB power cable to the PICO W, and press the red "stop/Restart" button in Thonny. This seems to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2C device, the error re-occurs and you have to repeat this annoying workaround fix.
+
+However, you also need to ensure you do the following while you are developing your code: 
  - If the memory in your PICO W already has "main.py", delete it from your PICO W (perhaps save it first). It may be that the version of "main.py" in your PICO W tries to immediately use an I2C device as soon as it is powered up, and it may be that your new program does not want to use that particular I2C device.  Removing "main.py" from your PICO W ensures that your PICO W boots up empty with regard to I2C devices
  - Disconnect and reconnect power to the PICO W (i.e. pull out and push back in the USB cable) and restart the backend in Thonny (press the red "Stop/Restart" button in the menu bar). 
  
-I'm thinking that when you have decided on your final circuit arrangement, this strange effect does not occur, but for permanent circuits, add your pull up resistors!!    
+I'm thinking that when you have decided on your final circuit arrangement (where the micropython program is no longer changing), this strange effect would thankfully not occur anymore.    
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
@@ -98,8 +104,8 @@ Attach BME280 Module as follows
  - SCL          -> pin 10 (GP7)
  - SDA          -> pin  9 (GP6)
 
-## Other program 1 - "i2sScan.py"
-**i2sScan.py** scans for any connected I2S modules. You do have to configure it to listen on various pin pairs.
+## Other program 1 - "i2cScan.py"
+**i2cScan.py** scans for any connected I2C modules. You do have to configure it to listen on various pin pairs.
 
 ## Other program 2 - "netScan.py"
 **netScan.py** sniffs for wifi access points and lists any SSID found (It doesn't need any modules).
