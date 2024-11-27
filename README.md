@@ -1,8 +1,5 @@
 # PICO-2-W-Micropython-examples
 
-_**To get hold of the "PICO 2 W" preview firmware, look at [https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/](https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/)**_
-_**where you can [Download "PICO 2 W" uf2 file](https://downloads.raspberrypi.com/micropython/mp_firmware_unofficial_latest.uf2 )**_ 
-
 This is a collection of 11 Micropython programs that you can use for the following modules: 
  - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
  - GPS Module      - GPS co-ordinates
@@ -12,28 +9,35 @@ This is a collection of 11 Micropython programs that you can use for the followi
 
 _The programs work on the latest PICO 2 W (RP2350 with wifi) when the above mentioned firmware is used. Please note, these programs also work on the original PICO W (RP2040 with WIFI), but only if the original "uf2" firmware is used (not the one mentioned above!)_
 
-_(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)_
-
+## Purpose of this repro
 The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. Your own webpage that displays values of Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. All you have to do is follow Steps 1 to 4 (as outlined below)
 
-N.B. This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware, as discussed above.  
+## Firmware
+To get hold of the "PICO 2 W" preview firmware, look at [https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/](https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/)
+where you can [Download "PICO 2 W" uf2 file](https://downloads.raspberrypi.com/micropython/mp_firmware_unofficial_latest.uf2 )
 
-You need to install "Thonny" (https://thonny.org) in your desktop/laptop, and check that the PICO W (or PICO 2 W) can communicate OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W (or (PICO 2 W) setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
+## Assumptions
+ - This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware, as discussed above.  
+ - You have installed "Thonny" (https://thonny.org) in your desktop/laptop, and checked that the PICO W (or PICO 2 W) can communicate OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W (or (PICO 2 W) setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
+ - If the OLED still doesn't work, try using the SSD1306 driver https://how2electronics.com/interfacing-ssd1306-oled-display-with-raspberry-pi-pico/)
+ 
+ FROM NOW ON, THE TERM "PICO W" WILL BE USED TO DESCRIBE THE "PICO W" or the "PICO 2 W" 
 
-FROM NOW ON, THE TERM "PICO W" WILL BE USED TO DESCRIBE THE "PICO W" or the "PICO 2 W" 
+## How to install the programs in Thonny
+ - Download the zip file of this repo and unzip it.
+ - In Thonny, press "View" -> "Files" to bring up the copy sidebar and copy all the content from the downloaded directory called "PICO_programs" to your PICO W. Do this until you see the following content in your PICO W memory:
+   - The main directory in your PICO W contains 11 Micropython programs, two HTML files (called "index.html" and "windex.html") and a new directory called "lib"
+   - The directory "lib" contains 5 Micropython programs. (these 5 programs can also be seen if you press "Tools" -> "Manage Packages") 
 
-N.B. To install the files, first download the zip file of this repo and unzip it. In Thonny, press "View" -> "Files" to bring up the copy sidebar and copy all the content from the downloaded directory called "PICO_programs" to your PICO W. Do this until you see the following content in your PICO W memory:
- - The main directory in your PICO W contains 11 Micropython programs, two HTML files (called "index.html" and "windex.html") and a new directory called "lib"
- - The directory "lib" contains 5 Micropython programs. (these 5 programs can also be seen if you press "Tools" -> "Manage Packages") 
-
-N.B. Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
+## Physical wiring considerations
+Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
 Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
 
 If you don't want to do this, you could use a breadboard, but you might find you need to add 1K pullup resistors to the SDA and SCL lines (to 3.3V). These pullup resistors may be necessary to counteract the effect of capacitance between the breadboard lines which lowers the impedance between pins at high frequency (e.g. when set at 400,000).
 
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK (instead of the I2C0 bus).
 
-Be aware, that if you wanted to make a permanent installation of the programs/circuits, you do really need to add a Pullup 1K resistor to the SDA and also another Pullup 1K resistor to the SCL line 
+Be aware, that if you wanted to make a permanent installation of the programs/circuits, its a good idea to add a Pullup 1K resistor to the SDA, and also another Pullup 1K resistor to the SCL line 
 
 ## The "EIO" Error
 This only happens with I2C device circuits. 
@@ -46,6 +50,7 @@ I'm thinking that when you have decided on your final circuit arrangement, this 
 
 <img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
 
+# THE PROGRAMS, HOW TO USE AND THE SEQUENCE
 
 ## Step 1 - Attach OLED and execute "oled_sh1106.py"  
 <img src="/images/oled_1_3_SH1106.jpg" alt="OLED"/>
