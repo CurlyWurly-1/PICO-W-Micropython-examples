@@ -16,7 +16,7 @@ All you have to do is methodically follow Steps 1 to 4 as outlined in the below 
 To get hold of the "PICO 2 W" preview firmware (RP2350 with wifi), look at [https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/](https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/)
 where you can [Download "PICO 2 W" uf2 file](https://downloads.raspberrypi.com/micropython/mp_firmware_unofficial_latest.uf2 )
 
-_N.B. Until the official "micropython" version is released for the "PICO 2 W" , you have to install the "preview" firmware as mentioned above. If however, you want to use the original "PICO W" (RP2040 with WIFI) instead, you can just load the original micropython "uf2" firmware which of course is easily found elsewhere, and is NOT the one mentioned above!_
+_N.B. Until the official "micropython" version is released for the "PICO 2 W" , you have to install the "preview" firmware as mentioned above. If however, you want to use the programs in an original "PICO W" (RP2040 with WIFI) instead, you will have to load the original micropython "uf2" firmware, which of course is easily found elsewhere (and it is NOT the "uf2" firmware as mentioned above!_
 
 ## Assumptions
  - This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware, as discussed above.  
