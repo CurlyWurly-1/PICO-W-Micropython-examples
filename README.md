@@ -48,7 +48,8 @@ Whilst this error can occur if the sensor is just not connected up, I did find t
  - I pressed Run (the program works OK)
  - I pressed "Ctrl/C" in Thonny to stop a program executing
  - I load/execute another program and the "EIO" error occurs just at the start (when executing the new program).
-ne way to fix this is to disconnect and reconnect the USB power cable to the PICO W, and press the red "stop/Restart" button in Thonny. This seems to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2C device, the error re-occurs and you have to repeat this annoying workaround fix.
+
+One way to fix this is to disconnect and reconnect the USB power cable to the PICO W and then press the red "stop/Restart" button in Thonny to reconnect the PICO W. This seems to reset things fine with the "EIO" error no longer happening thereafter. Of course, if you load/execute yet another program which uses a different I2C device, the error re-occurs and you have to repeat this annoying workaround fix. In effect you are switching the PICO W off and on
 
 However, you also need to ensure you do the following while you are developing your code: 
  - If the memory in your PICO W already has "main.py", delete it from your PICO W (perhaps save it first). It may be that the version of "main.py" in your PICO W tries to immediately use an I2C device as soon as it is powered up, and it may be that your new program does not want to use that particular I2C device.  Removing "main.py" from your PICO W ensures that your PICO W boots up empty with regard to I2C devices
