@@ -1,4 +1,8 @@
-# PICO-W-Micropython-examples
+# PICO-2-W-Micropython-examples - They also work with the original PICO W 
+
+_**To get hold of the "PICO 2 W" preview firmware, look at [https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/](https://www.raspberrypi.com/news/raspberry-pi-pico-2-w-on-sale-now/)**_
+_**where you can [Download "PICO 2 W" uf2 file](https://downloads.raspberrypi.com/micropython/mp_firmware_unofficial_latest.uf2 )**_ 
+
 This is a collection of 11 Micropython programs that you can use on either a PICO W (RP2040 with WIFI) or a PICO 2 W (RP2350 with wifi) for the following modules:
  - OLED (size 1.3) - Display that uses the SH1106 driver instead of the SSD1306 driver
  - GPS Module      - GPS co-ordinates
@@ -10,7 +14,9 @@ _(N.B. If the OLED still doesn't work, try using the SSD1306 driver https://how2
 
 The purpose of this page is to enable you to get started using these modules. Once all is connected and working OK, you could copy the relevant code from the programs to create your own "thing" e.g. Your own webpage that displays values of Temperature/Humidity/GPS Co-ordinates/Compass bearing. The main plus point is that you can do this subsequent adaption, knowing that your modules are already connected up and working OK. All you have to do is follow Steps 1 to 4 (as outlined below)
 
-N.B. This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware. Be aware that the PICO 2 W firmware is different to PICO W). You also need to have installed "Thonny" https://thonny.org/ in your desktop/laptop and the PICO W (or PICO 2 W) is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W (or (PICO 2 W) setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
+N.B. This page assumes that you have already set up your PICO W (or PICO 2 W) with the correct firmware. Be aware that the PICO 2 W firmware is different to PICO W. 
+
+You also need install "Thonny" (https://thonny.org) in your desktop/laptop, and that the PICO W (or PICO 2 W) is communicating OK with "Thonny" software. If this hasn't been done yet, please refer to the PICO W (or (PICO 2 W) setup instructions with Thonny (easy enough to find via g0ggle). Once you have completed the setup, come back here for these programs.  
 
 FROM NOW ON, THE TERM "PICO W" WILL BE USED TO DESCRIBE THE "PICO W" or the "PICO 2 W" 
 
