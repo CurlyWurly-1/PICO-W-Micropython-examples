@@ -10,6 +10,7 @@ from time import sleep
 
 # connect to wifi
 wlan = network.WLAN(network.STA_IF)
+wlan.active(False)
 wlan.active(True)
 ssid = secrets['ssid']
 pw = secrets['pw']
