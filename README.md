@@ -31,13 +31,13 @@ _N.B. This webpage has download links for other Pico versions e.g. for the firmw
    - The directory "lib" contains 4 Micropython modules and also the "secrets.py" file. (5 objects in total) N.B. Once the "secrets.py" file is manually updated with your particular SSID and password, all the WiFi related programs will work OK in your PICO W.     
 
 ## Physical wiring considerations
-Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
-Unfortunately, there is only one 3.3V pin on the PICO so unless you use a breadboard to connect things up, you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
+Be aware that if you don't want to use a breadboard to connect all four devices to the PICO W (at the same time) then 4 pairs of 3.3V/Gnd power connections will be required.
+Unfortunately, there is only one 3.3V pin on the PICO so you will have to create some sort of power split harness (e.g. 1 pair of wires in with 4 pairs out).
 
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK (instead of the I2C0 bus).
 
-Be aware, that if you wanted to make a permanent installation of the programs/circuits, its a good idea to add a Pullup 1K resistor to the SDA, and also another Pullup 1K resistor to the SCL line.
-If you are using a breadboard, Adding 1K pullup resistors to the SDA and SCL lines (to 3.3V) is a good idea amd would be quite easy to do. The addition of pullup resistors also helps to counteract any effects of stray capacitance between the breadboard lines lowering the impedance between pins at high frequency e.g. when set at 400,000.
+If you wanted to make a permanent installation of the programs/circuits, its a good idea to add two "pullup" 1K resistors - one resistor to connect between the SDA and 3.3V, and another resistor to connect between the SCL line to 3.3V.
+If you are using a breadboard, this is easy enough to do and the addition of pullup resistors also helps to counteract any possible effects of stray capacitance between the breadboard lines which do lower the impedance between pins at high frequency (e.g. when frequency is set at 400,000).
 
 ## The "EIO" Error
 This only happens with I2C device circuits. 
