@@ -28,7 +28,7 @@ _N.B. This webpage has download links for other Pico versions e.g. for the firmw
  - Download the zip file of this repo and unzip it.
  - In Thonny, press "View" -> "Files" to bring up the copy sidebar and copy all the content from the downloaded directory called "PICO_programs" to your PICO W. Do this until you see the following content in your PICO W memory:
    - The main directory in your PICO W contains 11 Micropython programs, two HTML files (called "index.html" and "windex.html") and a new directory called "lib"
-   - The directory "lib" contains 5 Micropython programs. (these 5 programs can also be seen if you press "Tools" -> "Manage Packages") 
+   - The directory "lib" contains 4 Micropython modules and also the "secrets.py" file. (5 objects in total) N.B. Once the "secrets.py" file is manually updated with your particular SSID and password, all the WiFi related programs will work OK in your PICO W.     
 
 ## Physical wiring considerations
 Be aware that if you want to connect all four devices to the PICO W at the same time, then 4 pairs of 3.3V/Gnd power connections will be required.
