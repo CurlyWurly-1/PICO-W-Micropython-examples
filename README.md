@@ -36,7 +36,7 @@ Unfortunately, there is only one 3.3V pin on the PICO so you will have to create
 
 In my case, to supply power to each module I constructed a 3.3V/GND harness out of dupoint wires, and used separate pairs of dupoint wires for each module's communication pins.  Whilst I didn't have to add any pull up resistors to the SDA/SCL wires, I did notice that I had to use the I2C1 bus for the modules to work OK (instead of the I2C0 bus).
 
-If you wanted to make a permanent installation of the programs/circuits, its a good idea to add two "pullup" 1K resistors - one resistor to connect between the SDA and 3.3V, and another resistor to connect between the SCL line to 3.3V.
+If you wanted to make a permanent installation of the programs/circuits, its a good idea to add two "pullup" 1K resistors - one resistor to connect between the SDA and 3.3V, with another resistor to connect between the SCL line and 3.3V.
 If you are using a breadboard, this is easy enough to do and the addition of pullup resistors also helps to counteract any possible effects of stray capacitance between the breadboard lines which do lower the impedance between pins at high frequency (e.g. when frequency is set at 400,000).
 
 ## The "EIO" Error
