@@ -68,7 +68,7 @@ I'm thinking that when you have decided on your final circuit arrangement (where
 **oled_sh1106.py** tests the 1.3 OLED Display using a SH1106 driver instead of the SSD1306 driver
 
 Attach 1.3 OLED module as follows
- - VCC          -> pin 37 (3v3_en)
+ - VDD          -> pin 37 (3v3_en)
  - GND          -> pin 38 (Gnd) 
  - SCL          -> pin 15 (GP11)
  - SDA          -> pin 14 (GP10)
