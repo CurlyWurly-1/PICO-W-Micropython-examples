@@ -56,7 +56,7 @@ However, you also need to ensure you do the following while you are developing y
  
 I'm thinking that when you have decided on your final circuit arrangement (where the micropython program is no longer changing), this strange effect would thankfully not occur anymore.    
 
-<img src="/images/picow_pinout.png" alt="PICO W Pinout"/>
+<img src="/images/pico_2_W_pinout.png" alt="PICO 2 W Pinout"/>
 
 # THE PROGRAMS, HOW TO USE AND THEIR SEQUENCE
 
